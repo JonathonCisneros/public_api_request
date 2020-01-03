@@ -4,7 +4,7 @@ $(document).ready(function () {
       dataType: 'json',
       success: function(data) {
         getData(data);
-        //console.log(data);
+        console.log(data);
       }
   }); // End AJAX request
 }); // End $.ready
@@ -32,7 +32,7 @@ function getData (data) {
         let city = results[index].location.city;
         let picture = results[index].picture.large;
         let phone = results[index].cell;
-        let location = results[index].location.street
+        let location = results[index].location.city
                                 + ', ' + results[index].location.state
                                 + ' ' + results[index].location.postcode;
 
